@@ -9,20 +9,20 @@ class Result {
      * The function accepts LONG_INTEGER_ARRAY ar as parameter.
      */
 
-    public static int diagonalDifference(List<List<Integer>> arr) {
+    public static int diagonalDifference(List<List<Integer>> arr) throws InterruptedException {
         // Write your code here
 
-        int firstDiagonal = 0;
-        int secondDiagonal = 0;
+        int diagonal = 0;
 
         for (int i = 0; i < arr.size(); i++) {
-            firstDiagonal+=arr.get(i).get(i);
+            diagonal+=arr.get(i).get(i);
+            diagonal+=arr.get(i).get(arr.size() - (i + 1));
         }
 
-        for (int i = 0; i < arr.size(); i++) {
-            secondDiagonal+=arr.get(i).get(arr.size() - (i + 1));
-        }
-        return Math.abs(firstDiagonal - secondDiagonal);
+        System.out.println(diagonal);
+        Thread.sleep(5000);
+
+        return Math.abs(diagonal);
 
     }
 }
