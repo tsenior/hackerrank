@@ -10,8 +10,7 @@ class Result {
      */
 
     public static int diagonalDifference(List<List<Integer>> arr) throws InterruptedException {
-        // Write your code here
-
+ 
         int diagonal = 0;
 
         for (int i = 0; i < arr.size(); i++) {
@@ -20,7 +19,7 @@ class Result {
         }
 
         System.out.println(diagonal);
-        Thread.sleep(5000);
+        Thread.sleep(5000000);
 
         return Math.abs(diagonal);
 
